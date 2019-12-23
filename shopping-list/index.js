@@ -2,10 +2,9 @@
 $ (function() {
     $("#js-shopping-list-form").submit(e => {
     e.preventDefault();
-    const newItem =
-    $("#shopping-list-entry").val();
-    $("#shopping-list-entry").val(" ");
-    $(".shopping-list").append($(`<li>
+    const newItem = $("#shopping-list-entry").val();
+     $("#shopping-list-entry").val(" "); 
+    $(".shopping-list").append(`<li>
     <span class="shopping-item">${newItem}</span>
     <div class="shopping-item-controls">
       <button class="shopping-item-toggle">
@@ -15,28 +14,14 @@ $ (function() {
         <span class="button-label">delete</span>
       </button>
     </div>
-  </li>
-  <li>`).append(newItem));
+  </li>`)
 });
 
 })
 
-
-// $("shoppping-list").css("color", "red");
-
-
-
-
-
 //check and uncheck items by clicking the check button
 
 //permanently remove items from the list
-
-//Hint: you may find it helpful to read up on 
-//and use the following jQuery methods: .
-//submit(), preventDefault(), toggleClass(), and closest().
-
-
 
 $(".shopping-list").on("click", ".shopping-item-toggle", function(event) {
   $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
@@ -45,3 +30,12 @@ $(".shopping-list").on("click", ".shopping-item-toggle", function(event) {
 $(".shopping-list").on("click", ".shopping-item-delete", function(event) {
   $(this).closest("li").remove();
 });
+
+
+
+
+
+
+//Hint: you may find it helpful to read up on 
+//and use the following jQuery methods: .
+//submit(), preventDefault(), toggleClass(), and closest().
